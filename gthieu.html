@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu</title>
+    <link rel="icon" href="https://nizlinh18.github.io/thuctap/41.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            @media only screen and (max-width: 600px);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            background-color: #FAF3EA;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0 20px 0;
+            background: white;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .logo img {
+            height: 100px;
+            margin-right: 10px;
+        }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo h1, .logo h2 {
+            margin: 0;
+            text-align: center;
+        }
+        .logo h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .logo h2 {
+            font-size: 24px;
+            color: #555;
+        }
+        .nav-icons-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .nav-menu a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .icons {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .icons img {
+            width: 30px;
+            height: 30px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .search-bar {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+            width: 50% ;
+            margin-left: auto; /* Canh giữa */
+            margin-right: auto; /* Canh giữa */
+        }
+        .search-bar input {
+            width: 55%;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+        .search-bar button {
+            padding: 5px 10px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .banner {
+            position: relative;
+            height: 500px;
+            width: 100%;
+            background-image: url("https://asslegion.github.io/index.html/banner.jpg");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(52, 52, 52, 0.68);
+            opacity: 0.8;
+        }
+        .banner-text {
+            position: absolute;
+            width: 835px;
+            height: 204px;
+            left: calc(50% - 835px / 2 + 0.5px);
+            top: calc(50% - 204px / 2);
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 150px;
+            line-height: 204px;
+            text-align: center;
+            color: #FFFFFF;
+            z-index: 1;
+        }
+        .content {
+            margin: 20px auto;
+            max-width: 800px;
+            justify-content: space-between;
+            background: #FAF3EA;
+            padding: 20px;
+            text-align: left;
+        }
+        ul {
+            text-align: left;
+            margin: 0 auto;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .footer {
+            background: white;
+            padding: 20px 0;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            max-width: 1200px;
+            margin: auto;
+            gap: 10px;
+        }
+        .footer .footer-section {
+            flex: 1;
+            padding: 10px 10px 0;
+        }
+        .footer .footer-section h3 {
+            margin-bottom: 5px;
+        }
+        .footer .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer .footer-section ul li {
+            margin: 3px 0;
+        }
+        .footer .subscribe input {
+            padding: 5px;
+            width: 70%;
+            border: 1px solid #ccc;
+        }
+        .footer .subscribe button {
+            padding: 5px 10px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .footer p {
+            text-align: left;
+            margin-top: 20px;
+        }
+        #menu-icon{
+        font-size: 2rem;
+        display: none;
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+        margin-left: 15px;
+    }
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 12px;
+        color: black;
+        text-decoration: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-icons-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        height: 300px;
+    }
+
+    .banner-text {
+        font-size: 60px;
+        line-height: 200px;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #menu-icon {
+        display: block; 
+        position: absolute;
+        top: 140px;
+        right: 55px;
+        z-index: 1001;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(81, 79, 79, 0.873);
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 12px;
+        color: rgb(243, 243, 243);
+        text-decoration: none;
+        border-bottom: 1px solid #ddd;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://asslegion.github.io/index.html/logo.jpg" alt="Starlit Homestay">
+            <div class="logo-text">
+                <h1>STARTLIT</3h1>
+                <h2>- HOMESTAY -</h2>
+            </div>
+        </div>
+        <div class="nav-icons-container">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <div class="nav-menu">
+                <a href="#">TRANG CHỦ</a>
+                <a href="#">KHÁM PHÁ</a>
+                <a href="#">GIỚI THIỆU</a>
+                <a href="#">LIÊN HỆ</a>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Nhập từ khóa...">
+            <button id="search-btn">Tìm kiếm</button>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="banner-overlay"></div>
+        <div class="banner-text">GIỚI THIỆU</div>
+    </div>
+    <div class="content">    
+        <p>STARLIT là một homestay độc đáo nằm giữa khu nghỉ dưỡng yên bình tại Sóc Sơn, nơi thiên nhiên và con người hòa quyện tạo nên không gian thư giãn hoàn hảo. Với thiết kế gần gũi, chan hòa ánh sáng và cây xanh, mỗi góc nhỏ tại STARLIT đều mang đến cảm giác an yên, giúp du khách tạm quên đi những bộn bề của cuộc sống thường nhật. Đây không chỉ là nơi nghỉ dưỡng mà còn là điểm dừng chân lý tưởng để bạn kết nối với thiên nhiên, tái tạo năng lượng và tận hưởng những phút giây bình yên trọn vẹn.</p>
+        <h3 style="padding-top: 10px;">Tiện nghi:</h3>
+        <ul>
+            <li style="padding-top: 10px;">Phòng ngủ:
+                
+                    <br>- Các loại phòng ngủ: Phòng đơn, phòng đôi, phòng gia đình, ...
+                    <br>- Tiện nghi trong phòng: Giường, tủ bàn ghế, điều hòa, wifi,...</li>
+                
+            </li>
+            <li>Phòng tắm:
+                    <br>- Tiện nghi trong phòng: Vòi sen, bồn tắm (tùy phòng), đồ dùng cá nhân,...
+            </li>
+            <li>Bếp:
+                    <br>- Tiện nghi bếp: Tủ lạnh, bếp nấu, lò vi sóng, dụng cụ nấu ăn,...
+            </li>
+            <li>Các tiện nghi khác:
+                    <br>- Wifi miễn phí
+                    <br>- Máy giặt
+                    <br>- TV
+                    <br>- Sân vườn (tùy căn)
+                    <br>- Khu vực nướng BBQ (tùy căn)
+            </li>
+        </ul>
+        <h3 style="padding-bottom: 10px;">Dịch vụ:</h3>
+        <ul>
+            <li>Ăn uống (ăn sáng, ăn trưa, ăn tối)</li>
+            <li>Giặt là</li>
+            <li>Thuê xe</li>
+            <li>Xe đưa đón</li>
+        </ul>
+        <h3 style="padding-bottom: 10px;">Chính sách:</h3>
+        <ul>
+            <li>Giờ nhận/trả phòng</li>
+            <li>Quy định về hủy phòng</li>
+            <li>Quy định khi khách mang theo vật nuôi</li>
+        </ul>
+        <h3 style="padding-bottom: 10px">Đội ngũ của chúng tôi:</h3>
+        <ul>
+            <li>Bao gồm những người trẻ tuổi, năng động, nhiệt tình và có kinh nghiệm trong lĩnh vực dịch vụ. Chúng tôi luôn sẵn sàng hỗ trợ và tư vấn cho khách hàng mọi lúc mọi nơi.</li>
+        </ul>
+        <h3 style="padding-bottom: 10px">Liên hệ:</h3>
+        <ul>
+            <li>Địa chỉ: 98 Dương Quảng Hàm.</li>
+            <li>Điện thoại: 057 2829 4444.</li>
+            <li>Email: starlit198@gmail.com.</li>
+        </ul>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const searchIcon = document.querySelector(".fa-magnifying-glass");
+                const searchBar = document.querySelector(".search-bar");
+    
+                searchIcon.addEventListener("click", function () {
+                    if (searchBar.style.display === "none" || searchBar.style.display === "") {
+                        searchBar.style.display = "block"; // Hiện thanh tìm kiếm
+                    } else {
+                        searchBar.style.display = "none"; // Ẩn nếu đã mở
+                    }
+                });
+            });
+        </script>
+
+    </div>
+    <div class="footer">
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+            <div class="footer-section">
+                <h3>STARTLIT</h3>
+                <p>Địa chỉ: 98 Dương Quảng Hàm, Cầu Giấy, Hà Nội</p>
+                <p>Điện thoại: 0567894444</p>
+                <p>Email: starlit198@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liên kết</h3>
+                <ul style="font-size: 14px;">
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="#">Khám Phá</a></li>
+                    <li><a href="#">Giới Thiệu</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Hỗ trợ</h3>
+                <ul style="font-size: 14px;">
+                    <li><a href="#">Thanh Toán</a></li>
+                    <li><a href="#">Quay Lại</a></li>
+                    <li><a href="#">Chính Sách Bảo Hành</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Đề Xuất</h3>
+                <input type="text" placeholder="Nhập gợi ý của bạn">
+                <button>Đăng Ký</button>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">&copy; 2025 Starlit Homestay. All rights reserved.</p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuIcon = document.getElementById("menu-icon");
+            const navMenu = document.querySelector(".nav-menu");
+    
+            menuIcon.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
+    
+</body>
