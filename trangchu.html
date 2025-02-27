@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://nizlinh18.github.io/thuctap/41.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- thẻ reset -->
+    <link rel="stylesheet" href="rest.css">
+    <!-- thẻ css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- thẻ nhúng icon ul-li  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font chữ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+     
+
+    <title>Stratlit Homestay</title>
+</head>
+<body >
+    <!-- header -->
+    <div class="header">
+        <div class="logo">
+            <img src="https://asslegion.github.io/index.html/logo.jpg" alt="Starlit Homestay">
+            <div class="logo-text">
+                <h1>STARTLIT</3h1>
+                <h2>- HOMESTAY -</h2>
+            </div>
+        </div>
+        <div class="nav-icons-container">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <div class="nav-menu">
+                
+                <a href="#">TRANG CHỦ</a>
+                
+                <div class="dropdown"><a href="#ccc">KHÁM PHÁ</a>
+                    <ul class="belowbar-dropdown" >
+                      <li><a href="">Danh sách căn</a></li>
+                      <li><a href="">Danh sách căn trống</a></li>
+                      <li><a href="">Danh sách khách hàng</a></li>
+                    </ul>
+                </div>
+                <a href="#">GIỚI THIỆU</a>
+                <a href="#">LIÊN HỆ</a>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Nhập từ khóa...">
+            <button id="search-btn">Tìm kiếm</button>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchIcon = document.querySelector(".fa-magnifying-glass");
+        const searchBar = document.querySelector(".search-bar");
+
+        searchIcon.addEventListener("click", function () {
+            if (searchBar.style.display === "none" || searchBar.style.display === "") {
+                searchBar.style.display = "block"; // Hiện thanh tìm kiếm
+            } else {
+                searchBar.style.display = "none"; // Ẩn nếu đã mở
+            }
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.querySelector(".nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+        });
+    });
+</script>
+
+    <!-- Body -->
+    <main>
+        <div class="banner">
+            <!-- <img src="./assets/img/image 18.png"> -->
+        </div>
+        <div class="main-conten">
+            
+            <!-- page1 -->
+            <div class="khunganh">
+                <div class="img1"><img src="https://nizlinh18.github.io/thuctap/image%2019.png">
+                    <h2 class="anh4">HOMSTAY STARTLIT</h2>
+                    <div class="gachchan"></div>
+                    <p class="gioithieu">
+                        Nơi đưa bạn đến những chốn yên bình giữa thiên nhiên, nơi cỏ cây hoa lá ôm trọn từng góc nhỏ. Hồ nước lặng, không gian chill tiện nghi đầy đủ - tất cả tạo nên một kỳ nghỉ mơ mang, thản thơi và đầy cảm hứng </p>
+                </div>
+
+                <div class="img1"><img src="https://nizlinh18.github.io/thuctap/image%2020.png">
+                    <h2 class="anh4">TIỆN LỢI</h2>
+                    <div class="gachchan"></div>
+                    <p class="gioithieu">
+                        Starlit Homestay - nơi tiện nghi hòa cùng thiên nhiên chill bên hồ, nướng BBQ, đắm mình trong bể bơ dạo xe đạp giữa cây cỏ, vui bất tận với âm nhạc và trò chợi tận huờng từng khoảng khắc!
+                    </p>
+                </div>
+
+                <div class="img2"><img src="https://nizlinh18.github.io/thuctap/image%2049.jpg">
+                    <h2 class="anh4">DỊCH VỤ</h2>
+                    <div class="gachchan"></div>
+                    <p class="gioithieu">
+                        Phục vụ tận tâm, chu đáo từng khoảnh khắc. Từ BBQ, tiệc tùng đến lửa trại đưa đón - chỉ cần bạn muốn mọi thứ đều sẵn sàng chào đón bạn                                                                                 !
+                    </p>
+                </div>
+                
+            </div>
+            <!-- =====pag2===== -->
+
+        </div>
+
+        <div class="page2">
+            <div class="overlay"></div>
+           <div class="cannoibat">
+               <h1> CĂN NỔI BẬT</h1>
+           </div>
+           <div class="khunganh2">
+               <div class="img3"><img src="https://nizlinh18.github.io/thuctap/image%20(3).png">
+                   
+                   <p class="gioithieu">
+                       Góc nhỏ bình yên cho hai người. không gian riêng tư lãng mạn bên hồ, chỉ cần có bạn người thương căn nhà gỗ mộc mạc và khung cảnh thiên nhiên dịu dàng. Nơi lý tưởng để thả mình trong những khoảnh khắc ngọt ngào!
+                   </p>
+               </div>
+               <div class="img3"><img src="https://nizlinh18.github.io/thuctap/image%20(2).png">
+                   
+                   <p class="gioithieu">
+                       Không gian sang trọng với tông màu trắng - be tinh tế, mài mòm mềm mại, hồ bơi xanh trong vắt. Với sức chứa 15 người, tối đa 20 người - nơi bạn có thể tận hưởng sự riêng tư và phút giây thư giãn tuyệt đối!
+                   </p>
+               </div>
+               <div class="img4"><img src="https://nizlinh18.github.io/thuctap/image%20(1).png">
+                   
+                   <p class="gioithieu">
+                       Ẩn mình giữa thiên nhiên. Ngôi nhà gỗ, hồ bơi, con đường đá dẫn lối khu vườn. Một không gian yên bình nhưng không kém phần lãng mạn, nơi lý tưởng để gia đình cùng nhau tận hưởng hoàng hôn bên núi đồi!
+                   </p>
+               </div>
+           </div>
+
+       </div>
+       <div class="page3">
+        <div class="lop"></div>
+        <div class="title-container">
+            <h2>STARTLIT HOMESTAY</h2>
+            <div class="kengang"></div>
+            <p class="highlight"> Sự lựa chọn tuyệt vời và an toàn cho bạn!</p>
+        </div>
+        <div class="content">
+            <p>✨ <strong>Startlit - Hệ thống homestay nghỉ dưỡng - Chạm đến bình yên</strong> ✨</p>
+            <p>
+                Startlit đưa bạn đến những căn homestay xinh đẹp, hòa mình giữa thiên nhiên, nơi bạn có thể tận hưởng không gian riêng tư, sang trọng nhưng vẫn ấm áp và gần gũi. Từ phong cách Địa Trung Hải tinh tế, nhà gỗ ấm cúng đến những căn biệt thự lãng mạn bên hồ – tất cả đều được thiết kế để mang đến trải nghiệm nghỉ dưỡng trọn vẹn nhất. <br>
+                Hồ bơi trong xanh, khu vườn ngập tràn cây lá, những buổi BBQ vui vẻ hay đơn giản là phút giây thư giãn bên ly rượu vang. Hãy đến và tận hưởng những khoảnh khắc bình yên nhất! 🍷🌿🏡. <br>
+                Hệ thống homestay nằm trải dài trong những khu nghỉ dưỡng tại huyện Sóc Sơn - Hà Nội, đem đến cho khách hàng những trải nghiệm tuyệt vời và đặc biệt nhất!. <br>
+            </p>
+        </div>
+    </div>
+
+    <div class="khoanhkhac">
+    <h2><b>KHOẢNH KHẮC</b></h2>
+    </div>
+
+    <div class="gallery-section" style="margin-right: 0px; margin-left: 0px; margin-bottom: 0px;">
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="https://nizlinh18.github.io/thuctap/im1.jpg" class="im1">
+                <img src="https://nizlinh18.github.io/thuctap/im2.jpg" class="im2">
+                <img src="https://nizlinh18.github.io/thuctap/im3.jpg" class="im3">
+                <img src="https://nizlinh18.github.io/thuctap/im4.jpg" class="im4">
+                <img src="https://nizlinh18.github.io/thuctap/im5.jpg" class="im5">
+                <img src="https://nizlinh18.github.io/thuctap/im6.jpg" class="im6">
+                <img src="https://nizlinh18.github.io/thuctap/im7.jpg" class="im7">
+                <img src="https://nizlinh18.github.io/thuctap/im8.jpg" class="im8">
+                <img src="https://nizlinh18.github.io/thuctap/im9.jpg" class="im9">
+                <img src="https://nizlinh18.github.io/thuctap/im10.jpg" class="im10">
+        </div>
+
+        <div class="footer">
+            <div class="footer-content" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+                <div class="footer-section">
+                    <h3>STARTLIT</h3>
+                    <p>Địa chỉ: 98 Dương Quảng Hàm, Cầu Giấy, Hà Nội</p>
+                    <p>Điện thoại: 0567894444</p>
+                    <p>Email: starlit198@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên kết</h3>
+                    <ul style="font-size: 14px;">
+                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="#">Khám Phá</a></li>
+                        <li><a href="#">Giới Thiệu</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Hỗ trợ</h3>
+                    <ul style="font-size: 14px;">
+                        <li><a href="#">Thanh Toán</a></li>
+                        <li><a href="#">Quay Lại</a></li>
+                        <li><a href="#">Chính Sách Bảo Hành</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Đề Xuất</h3>
+                    <input type="text" placeholder="Nhập gợi ý của bạn">
+                    <button>Đăng Ký</button>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 20px;">&copy; 2025 Starlit Homestay. All rights reserved.</p>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuIcon = document.getElementById("menu-icon");
+                const navMenu = document.querySelector(".nav-menu");
+        
+                menuIcon.addEventListener("click", function () {
+                    navMenu.classList.toggle("active");
+                });
+            });
+        </script>
+    </div>
+
+    </main>
+   
+
+
+
+    
+</body>
+</html>
