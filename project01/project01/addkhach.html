@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm khách hàng</title>
+    <link rel="icon" href="https://nizlinh18.github.io/thuctap/41.png">
+    <link rel="stylesheet" href="add.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    @media only screen and(max-width: 600px);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF3EA;
+    overflow-x: hidden;
+}
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 20px 0;
+    margin: 0px;
+    background: white;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.logo img {
+    height: 100px;
+    margin-right: 10px;
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo h1, .logo h2 {
+    margin: 0;
+    text-align: center;
+}
+.logo h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+.logo h2 {
+    font-size: 24px;
+    color: #555;
+}
+.nav-icons-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.nav-menu a:hover{
+color:rgb(172, 132, 31);
+}
+.nav-menu a {
+margin: 0 10px;
+text-decoration: none;
+color: black;
+font-weight: bold;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background: transparent; /* Loại bỏ nền */
+padding: 0;
+}
+.dropdown-content a {
+color: black;
+text-decoration: none;
+display: block;
+padding: 5px 10px; /* Giữ khoảng cách giữa chữ */
+background: transparent;
+}
+.dropdown-content a:hover {
+background: transparent; /* Loại bỏ nền xám khi hover */
+text-decoration: underline; /* Gạch chân khi hover */
+color: #c6a900;
+}
+.dropdown-content.show {
+display: block;
+}
+.quest img {
+width: 40px;
+height: auto;
+
+}
+
+.belowbar {
+background-color: rgb(172, 132, 31);
+padding: 0px 17.4vw;
+z-index: 1;
+
+
+}
+.small-below {
+display: none;
+}
+.sticky {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 100;
+animation: slideDown 0.3s ease;
+}
+.sticky2 {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 100;
+animation: slideDown 0.3s ease;
+}
+.below-content {
+background-color: rgb(172, 132, 31);
+display: none;
+position: absolute;
+background: transparent; /* Loại bỏ nền */
+padding: 0
+}
+.below-content > li {
+position: relative;
+
+}
+.below-content > li > a{
+
+display: block;
+color: #ffffff;
+padding-top: 11.5px;
+padding-bottom: 11.5px;
+padding-left: 35px;
+padding-right: 35px;
+background-color: rgb(172, 132, 31);
+text-decoration: none;
+font-size: 15px;
+font-weight: 500;
+white-space: nowrap;
+
+}
+.below-content > li > a:hover{
+background-color: rgb(172, 132, 31);
+}
+#drop {
+font-size: 9px;
+margin-bottom: 2px;
+margin-left: 5px;
+}
+.below-content a.active {
+background-color:rgb(172, 132, 31);
+
+}
+.belowbar-dropdown {
+display: none;
+position: absolute;
+background-color: #ffffff;
+min-width: 200px;
+white-space: nowrap ;
+z-index: 1;
+border-top: 2px solid rgb(172, 132, 31);
+margin: 0 0;
+padding:0;
+
+}
+.belowbar-dropdown li {
+display: block;
+}
+.belowbar-dropdown li a {
+color: #000000;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+white-space: nowrap;
+
+
+}
+.belowbar-dropdown li a:hover {
+color: rgb(212, 186, 55);
+background-color: #e6e4e4;
+min-width: 200px;
+
+}
+.dropdown:hover .belowbar-dropdown {
+display: block;
+
+}
+.nav-menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.icons {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.icons img {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.search-bar {
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    width: 50% ;
+    margin-left: auto; /* Canh giữa */
+    margin-right: auto; /* Canh giữa */
+}
+.search-bar input {
+    width: 55%;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+.search-bar button {
+    padding: 5px 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.footer {
+    background: white;
+    padding: 0px 0;
+    margin-top: 0px;
+    text-align: left;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    max-width: 1200px;
+    margin: auto;
+    gap: 10px;
+}
+.footer-section {
+    flex: 1;
+    padding: 10px 10px 0;
+}
+.footer-section h3 {
+    margin-bottom: 5px;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin: 3px 0;
+}
+.subscribe input {
+    padding: 5px;
+    width: 70%;
+    border: 1px solid #ccc;
+}
+.subscribe button {
+    padding: 5px 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.footer p {
+    text-align: left;
+    margin-top: 20px;
+}
+#menu-icon{
+font-size: 2rem;
+display: none;
+display: none;
+font-size: 2rem;
+cursor: pointer;
+margin-left: 15px;
+}
+a{
+    text-decoration: none;
+    color: purple;
+}
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 12px;
+        color: black;
+        text-decoration: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-icons-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
+
+    }
+    .nav-icons-container:hover::after{
+    color:rgb(212, 186, 55);
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    #menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #menu-icon {
+        display: block; 
+        position: absolute;
+        top: 140px;
+        right: 20px;
+        z-index: 1001;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(81, 79, 79, 0.873);
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 12px;
+        color: rgb(243, 243, 243);
+        text-decoration: none;
+        border-bottom: 1px solid #ddd;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+}
+footer{
+            background: #f4e6d8;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        .footer-content{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://asslegion.github.io/index.html/logo.jpg" alt="Starlit Homestay">
+            <div class="logo-text">
+                <h1>STARTLIT</h1>
+                <h2>- HOMESTAY -</h2>
+            </div>
+        </div>
+        <div class="nav-icons-container">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <div class="nav-menu">
+                <a href="./trangchu.html">TRANG CHỦ</a>
+                <div class="dropdown"><a href="#">KHÁM PHÁ</a>
+                    <ul class="belowbar-dropdown" >
+                      <li><a href="./cacloaican.html">Danh sách căn</a></li>
+                      <li><a href="./lich.html">Danh sách căn trống</a></li>
+                      <li><a href="./kh.html">Danh sách khách hàng</a></li>
+                    </ul>
+                </div>
+                <a href="./gioithieu.html">GIỚI THIỆU</a>
+                <a href="./fb4(draft).html">LIÊN HỆ</a>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="./dangnhap.html"><i class="fa-regular fa-circle-user"></i></a>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Nhập từ khóa...">
+            <button id="search-btn">Tìm kiếm</button>
+        </div>
+    </div>
+    <main>
+        <div class="container">
+          <div class="headerr">
+              <h3>Thêm khách hàng:</h3> 
+              <select class="sh2">
+                  <option value="" disabled selected>Chọn căn homestay</option>
+                  <option value="sunrise">ĐÒNG ĐÒNG LODGE</option>
+                  <option value="moonlight">NHÀ RƠM</option>
+                  <option value="starlight">NGÔI LÀNG CỔ TÍCH</option>
+                  <option value="oceanview">EUDORA VILLA</option>
+                  <option value="mountain">STEALLAR HOUSE</option>
+                  <option value="forest">JOY HOUSE</option>
+                  <option value="lakehouse">ARMANI VILLA</option>
+                  <option value="beachside">ISLAND HOUSE IH2</option>
+                  <option value="garden">THE JEFFERSON</option>
+              </select>
+          </div>
+          
+            <div class="row">
+                <div class="col">
+                    <br>
+                    <div class="form-group">
+                        <label>Họ và tên:</label>
+                        <input type="text" class="full-width" placeholder="">
+                    </div>
+                    <div class="form-group">
+                      <div class="form-group" style="margin-bottom: 5px">
+                          <label>Ngày đặt:</label>
+                          <select class="dropdown">
+                              <option value="" disabled selected>Ngày</option>
+                              <script>
+                                  for (let i = 1; i <= 31; i++) {
+                                      document.write(`<option value="${i}">${i}</option>`);
+                                  }
+                              </script>
+                          </select>
+                          &nbsp;&nbsp;&nbsp;
+                      
+                          <select class="dropdown">
+                              <option value="" disabled selected>Tháng</option>
+                              <script>
+                                  for (let i = 1; i <= 12; i++) {
+                                      document.write(`<option value="${i}">Tháng ${i}</option>`);
+                                  }
+                              </script>
+                          </select>
+                          &nbsp;&nbsp;&nbsp;
+                      
+                          <select class="dropdown">
+                              <option value="" disabled selected>Năm</option>
+                              <script>
+                                  for (let i = 2020; i <= 2030; i++) {
+                                      document.write(`<option value="${i}">${i}</option>`);
+                                  }
+                              </script>
+                          </select>
+                      </div>                      &nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="form-group">
+                        <label>Số lượng người: </label>
+                        <span>Người lớn:</span>
+                        &nbsp;&nbsp;&nbsp;
+                        <input type="text" class="small-input" placeholder="">
+                        &nbsp;&nbsp;&nbsp;
+                        <span>Trẻ em:</span>
+                        &nbsp;&nbsp;&nbsp;
+                        <input type="text" class="small-input" placeholder="">
+    
+                    </div>
+                    <div class="form-group">
+                        <label>Check in: </label>
+                        <input type="text" class="extra-small" placeholder="Giờ">
+                        <span>:</span>
+                        <input type="text" class="extra-small" placeholder="Phút">
+                    </div>
+                    <div class="form-group">
+                        <label>Đặt cọc: </label>
+                        <input type="text" class="full-width" placeholder="000.000">
+                        &nbsp;&nbsp;&nbsp;
+                        <span>VNĐ</span>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <br>
+                    <div class="form-group">
+                        <label>Số điện thoại:</label>
+                        <input type="text" class="full-width" placeholder="">
+                    </div>
+                    <div class="form-group">
+                      <div class="form-group" style="margin-bottom: 5px;">
+                          <label>đến: </label>
+                          <select class="dropdown">
+                              <option value="" disabled selected>Ngày</option>
+                              <script>
+                                  for (let i = 1; i <= 31; i++) {
+                                      document.write(`<option value="${i}">${i}</option>`);
+                                  }
+                              </script>
+                          </select>
+                          &nbsp;&nbsp;&nbsp;
+                      
+                          <select class="dropdown">
+                              <option value="" disabled selected>Tháng</option>
+                              <script>
+                                  for (let i = 1; i <= 12; i++) {
+                                      document.write(`<option value="${i}">Tháng ${i}</option>`);
+                                  }
+                              </script>
+                          </select>
+                          &nbsp;&nbsp;&nbsp;
+                      
+                          <select class="dropdown">
+                              <option value="" disabled selected>Năm</option>
+                              <script>
+                                  for (let i = 2020; i <= 2030; i++) {
+                                      document.write(`<option value="${i}">${i}</option>`);
+                                  }
+                              </script>
+                          </select>
+                      </div>                      &nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="form-group">
+                        <label>Thêm người:</label>
+                        <span>Người lớn:</span>
+                        &nbsp;&nbsp;&nbsp;
+                        <input type="text" class="small-input" placeholder="">
+                        &nbsp;&nbsp;&nbsp;
+                        <span>Trẻ em:</span>
+                        &nbsp;&nbsp;&nbsp;
+                        <input type="text" class="small-input" placeholder="">
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="divider">Dịch vụ</div>
+            <div class="service-grid">
+                <div class="service-item">
+                    <label>Than nướng:</label>
+                    <input type="text" class="small-input" placeholder="">
+                    <span style="margin-left: 5px">kg</span>
+                </div>
+                <div class="service-item">
+                    <label>Đá lạnh:</label>
+                    <input type="text" class="small-input" placeholder="">
+                    
+                    <span style="margin-left: 5px">túi</span>
+                </div>
+                <div class="service-item">
+                    <label>Phí dọn dẹp:</label>
+                    <input type="text" class="small-input" placeholder="">
+                    <span style="margin-left: 5px">lần</span>
+                </div>
+                <div class="service-item">
+                    <label>Người dọn dẹp:</label>
+                    <input type="text" class="small-input" placeholder="">
+                    <span style="margin-left: 5px">người</span>
+                </div>
+                <div class="service-item">
+                    <label>Check in sớm:</label>
+                    <input type="text" class="small-input" placeholder="">
+                    <span style="margin-left: 5px">giờ</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label style="font-weight: bold; margin-bottom: 0px;">Ghi chú:</label>
+                <textarea class="full-widthtext" placeholder="Nhập dữ liệu"></textarea>
+            </div>
+            <style>
+                .notification {
+                    position: fixed;
+                    top: -100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #4caf50;
+                    color: #fff;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                    opacity: 0;
+                    transition: top 0.5s ease, opacity 0.5s ease;
+                    z-index: 9999;
+                }
+            
+                .notification.show {
+                    top: 20px;
+                    opacity: 1;
+                }
+            
+                .close-btn {
+                    margin-left: 15px;
+                    cursor: pointer;
+                    font-weight: bold;
+                }
+            </style>
+            
+            <div class="confirm-container">
+                <button class="confirm-btn">Xác nhận thông tin</button>
+                <div class="notification" id="notification">
+                    Xác nhận thành công!
+                    <span class="close-btn" id="closeButton">&times;</span>
+                </div>
+            </div>
+            
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const confirmButton = document.querySelector('.confirm-btn');
+                    const notification = document.getElementById('notification');
+                    const closeButton = document.getElementById('closeButton');
+            
+                    confirmButton.addEventListener('click', function () {
+                        notification.classList.add('show');
+            
+                        setTimeout(() => {
+                            if (notification.classList.contains('show')) {
+                                notification.classList.remove('show');
+                            }
+                        }, 3000);
+                    });
+            
+                    closeButton.addEventListener('click', function () {
+                        notification.classList.remove('show');
+                    });
+                });
+            </script>
+            
+                
+        </div>
+          
+    </main>
+    
+    <div class="footer">
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+            <div class="footer-section">
+                <h3 style="font-size: 22px;"><strong>STARTLIT</strong></h3>
+                <p style="margin-top: 5px;">Địa chỉ: 98 Dương Quảng Hàm, Cầu Giấy, Hà Nội</p>
+                <p style="margin-top: 5px;">Điện thoại: 0567894444</p>
+                <p style="margin-top: 5px;">Email: starlit198@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3 style="font-size: 22px; margin-bottom: 0px;"><strong>Liên kết</strong></h3>
+                <ul style="font-size: 14px;">
+                    <li style="margin-top: 0px;"><a href="./trangchu.html" >Trang Chủ</a></li>
+                    <li><a href="./cacloaican.html">Khám Phá</a></li>
+                    <li><a href="./gioithieu.html">Giới Thiệu</a></li>
+                    <li><a href="./fb4(draft).html">Liên Hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 style="font-size: 22px; margin-bottom: 0px;"><strong>Hỗ trợ</strong></h3>
+                <ul style="font-size: 14px;">
+                    <li style="margin-top: 0px;"><a href="#">Thanh Toán</a></li>
+                    <li><a href="./trangchu.html">Quay Lại</a></li>
+                    <li><a href="#">Chính Sách Bảo Hành</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 style="font-size: 22px;"><strong>Đề Xuất</strong></h3>
+                <div style="display:flex; gap:2px; font-size:13px;">
+                <input type="text" placeholder="Nhập gợi ý của bạn">
+                <div class="buttonft">
+                    <a href="./dangki.html">
+                        <button> Đăng Ký</button></div></div>
+                    </a>
+                
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">&copy; 2025 Starlit Homestay. All rights reserved.</p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuIcon = document.getElementById("menu-icon");
+            const navMenu = document.querySelector(".nav-menu");
+    
+            menuIcon.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchIcon = document.querySelector(".fa-magnifying-glass");
+            const searchBar = document.querySelector(".search-bar");
+
+            searchIcon.addEventListener("click", function () {
+                if (searchBar.style.display === "none" || searchBar.style.display === "") {
+                    searchBar.style.display = "block"; // Hiện thanh tìm kiếm
+                } else {
+                    searchBar.style.display = "none"; // Ẩn nếu đã mở
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

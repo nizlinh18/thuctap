@@ -1,0 +1,1160 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu</title>
+    <link rel="icon" href="https://nizlinh18.github.io/thuctap/41.png">
+    <link rel="stylesheet" href="can4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            @media only screen and (max-width: 600px);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            background-color: #FAF3EA;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0 20px 0;
+            background: white;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .logo img {
+            height: 100px;
+            margin-right: 10px;
+        }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo h1, .logo h2 {
+            margin: 0;
+            text-align: center;
+        }
+        .logo h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .logo h2 {
+            font-size: 24px;
+            color: #555;
+        }
+        .nav-icons-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .nav-menu a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .nav-menu a:hover{
+            color:rgb(172, 132, 31);
+        }
+        .icons {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .icons img {
+            width: 30px;
+            height: 30px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .search-bar {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+            width: 50% ;
+            margin-left: auto; /* Canh giữa */
+            margin-right: auto; /* Canh giữa */
+        }
+        .search-bar input {
+            width: 55%;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+        .search-bar button {
+            padding: 5px 10px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .banner {
+            position: relative;
+            height: 500px;
+            width: 100%;
+            background-image: url("https://nizlinh18.github.io/thuctap/hi.jpg");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(52, 52, 52, 0.68);
+            opacity: 0.8;
+        }
+        .banner-text {
+            position: absolute;
+            width: 835px;
+            height: 204px;
+            left: calc(50% - 835px / 2 + 0.5px);
+            top: calc(50% - 204px / 2);
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 150px;
+            line-height: 204px;
+            text-align: center;
+            color: #FFFFFF;
+            z-index: 1;
+        }
+        .content {
+            margin: 20px auto;
+            max-width: 800px;
+            justify-content: space-between;
+            background: #FAF3EA;
+            padding: 20px;
+            text-align: left;
+        }
+        ul {
+            text-align: left;
+            margin: 0 auto;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;}
+        .footer{
+                background: white;
+                padding: 20px 0;
+                margin-top: 20px;
+            }
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        max-width: 1200px;
+        margin: auto;
+        gap: 10px;
+    }
+    .footer-section {
+        flex: 1;
+        padding: 10px 10px 0;
+    }
+    .footer-section h3 {
+        margin-bottom: 5px;
+    }
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    .footer-section ul li {
+        margin: 3px 0;
+    }
+    .subscribe input {
+        padding: 5px;
+        width: 70%;
+        border: 1px solid #ccc;
+    }
+    .subscribe button {
+        padding: 5px 10px;
+        background: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .footer p {
+        text-align: left;
+        margin-top: 20px;
+    }
+        #menu-icon{
+        font-size: 2rem;
+        display: none;
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+        margin-left: 15px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background: transparent; /* Loại bỏ nền */
+        padding: 0;
+    }
+
+    .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 5px 10px; /* Giữ khoảng cách giữa chữ */
+        background: transparent;
+    }
+
+    .dropdown-content a:hover {
+        background: transparent; /* Loại bỏ nền xám khi hover */
+    text-decoration: underline; /* Gạch chân khi hover */
+    color: #c6a900;
+    }
+    .dropdown-content.show {
+      display: block;
+    }
+
+   
+.quest img {
+width: 40px;
+height: auto;
+
+}
+
+.belowbar {
+background-color: rgb(172, 132, 31);
+padding: 0px 17.4vw;
+z-index: 1;
+
+
+}
+.small-below {
+display: none;
+}
+
+
+.sticky {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 100;
+animation: slideDown 0.3s ease;
+}
+.sticky2 {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 100;
+animation: slideDown 0.3s ease;
+}
+
+.below-content {
+background-color: rgb(172, 132, 31);
+display: none;
+position: absolute;
+background: transparent; /* Loại bỏ nền */
+padding: 0
+}
+.below-content > li {
+position: relative;
+
+}
+.below-content > li > a{
+
+display: block;
+color: #ffffff;
+padding-top: 11.5px;
+padding-bottom: 11.5px;
+padding-left: 35px;
+padding-right: 35px;
+background-color: rgb(172, 132, 31);
+text-decoration: none;
+font-size: 15px;
+font-weight: 500;
+white-space: nowrap;
+
+}
+.below-content > li > a:hover{
+background-color: rgb(172, 132, 31);
+}
+#drop {
+
+font-size: 9px;
+margin-bottom: 2px;
+margin-left: 5px;
+}
+.below-content a.active {
+background-color:rgb(172, 132, 31);
+
+}
+.belowbar-dropdown {
+display: none;
+position: absolute;
+background-color: #ffffff;
+  min-width: 200px;
+  white-space: nowrap ;
+  z-index: 1;
+  border-top: 2px solid rgb(172, 132, 31);
+  margin: 0 0;
+  padding:0;
+
+}
+.belowbar-dropdown li {
+display: block;
+}
+.belowbar-dropdown li a {
+color: #000000;
+padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+
+  
+}
+.belowbar-dropdown li a:hover {
+color: rgb(212, 186, 55);
+background-color: #e6e4e4;
+min-width: 200px;
+
+}
+.dropdown:hover .belowbar-dropdown {
+display: block;
+
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 12px;
+        color: black;
+        text-decoration: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-icons-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
+
+    }
+    .nav-icons-container:hover::after{
+    color:rgb(212, 186, 55);
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        height: 300px;
+    }
+
+    .banner-text {
+        font-size: 60px;
+        line-height: 200px;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #menu-icon {
+        display: block; 
+        position: absolute;
+        top: 140px;
+        right: 55px;
+        z-index: 1001;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(81, 79, 79, 0.873);
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 12px;
+        color: rgb(243, 243, 243);
+        text-decoration: none;
+        border-bottom: 1px solid #ddd;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+}
+footer{
+            background: white;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        .footer-content{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://asslegion.github.io/index.html/logo.jpg" alt="Starlit Homestay">
+            <div class="logo-text">
+                <h1>STARTLIT</3h1>
+                <h2><strong>- HOMESTAY -</strong></h2>
+            </div>
+        </div>
+        <div class="nav-icons-container">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <div class="nav-menu">
+                <a href="../trangchu.html">TRANG CHỦ</a>
+                <div class="dropdown"><a href="#">KHÁM PHÁ</a>
+                    <ul class="belowbar-dropdown" >
+                      <li><a href="../cacloaican.html">Danh sách căn</a></li>
+                      <li><a href="../lich.html">Danh sách căn trống</a></li>
+                      <li><a href="../kh.html">Danh sách khách hàng</a></li>
+                    </ul>
+                </div>
+                <a href="../gioithieu.html">GIỚI THIỆU</a>
+                <a href="../fb4(draft).html">LIÊN HỆ</a>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="../dangnhap.html"><i class="fa-regular fa-circle-user"></i></a>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Nhập từ khóa...">
+            <button id="search-btn">Tìm kiếm</button>
+        </div>
+    </div>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuIcon = document.getElementById("menu-icon");
+            const navMenu = document.querySelector(".nav-menu");
+    
+            menuIcon.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchIcon = document.querySelector(".fa-magnifying-glass");
+        const searchBar = document.querySelector(".search-bar");
+
+        searchIcon.addEventListener("click", function () {
+            if (searchBar.style.display === "none" || searchBar.style.display === "") {
+                searchBar.style.display = "block"; // Hiện thanh tìm kiếm
+            } else {
+                searchBar.style.display = "none"; // Ẩn nếu đã mở
+            }
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.querySelector(".nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+        });
+    });
+</script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+<body>
+
+  <main class="mt-6 px-6">
+    <!-- Tiêu đề căn giữa -->
+    <div class="text-center mb-6">
+        <h2 class="text-xl font-bold">
+            EUDORA VILLA<br>5.550.000 đ
+
+        </h2>
+    </div>
+
+    <!-- Chia bố cục 2 phần: Bảng bên trái, ảnh bên phải -->
+    <!-- Chia layout thành hai phần: Bảng bên trái + Ảnh bên phải -->
+<div class="flex gap-4">
+  <!-- Phần chứa 2 bảng -->
+  <div class="w-2/3">
+      <!-- Bảng 1: Thông tin đặt phòng -->
+      <table class="border border-gray-300 w-full text-xs">
+          <thead>
+              <tr class="bg-gray-100">
+                  <th colspan="4" class="text-sm font-semibold p-2 text-center">Thông tin đặt phòng</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Hàng nhập Tháng - Năm - Tìm -->
+              <tr>
+                  <td colspan="4" class="border border-gray-300 p-1">
+                      <div class="flex gap-2">
+                          <input class="w-1/3 border border-gray-300 p-2 text-xs" type="text" placeholder="Tháng"/>
+                          <input class="w-1/3 border border-gray-300 p-2 text-xs" type="text" placeholder="Năm"/>
+                          <button class="w-1/3 bg-[#F6DDBD] border border-gray-300 p-2 text-xs">Tìm</button>
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="border border-gray-300 p-1 w-1/3">Số phòng trống</td>
+                  <td colspan="3" class="border border-gray-300 p-1">
+                      <input class="w-full border border-gray-300 p-2 text-xs" type="text"/>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="border border-gray-300 p-1 w-1/3">Số phòng đã đặt</td>
+                  <td colspan="3" class="border border-gray-300 p-1">
+                      <input class="w-full border border-gray-300 p-2 text-xs" type="text"/>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+
+      <!-- Bảng 2: Tìm kiếm khách hàng -->
+      <table class="border border-gray-300 w-full text-xs mt-4">
+          <thead>
+              <tr class="bg-gray-100">
+                  <th colspan="4" class="text-sm font-semibold p-2 text-center">Tìm kiếm khách hàng</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="border border-gray-300 p-1 w-1/3">Số điện thoại khách hàng</td>
+                  <td colspan="3" class="border border-gray-300 p-1">
+                      <div class="flex gap-2">
+                          <input class="w-full border border-gray-300 p-2 text-xs" type="text"/>
+                          <button class="w-24 bg-[#F6DDBD] border border-gray-300 p-2 text-xs">Tìm</button>
+                      </div>
+                  </td>
+				  
+              </tr>
+          </tbody>
+		  
+      </table>
+  </div>
+
+  <!-- Ảnh Homestay bên phải (cùng chiều rộng với 2 bảng) -->
+  <div class="w-1/3">
+    <img src="https://raw.githubusercontent.com/HangHang25/can-4/refs/heads/main/can%204.jpg"
+        alt="Homestay Eudora Villa"
+        class="w-full h-full object-cover rounded-lg shadow-md">
+</div>
+</div>
+
+</main>
+
+
+        </aside>
+
+        <!-- Bảng Bên Phải -->
+         
+		<section class="w-6/6 p-2 mt-8">
+            <div class="w-full overflow-x-auto">
+                <table id="customerTable" class="min-w-[1200px] w-full border-collapse shadow-lg rounded-lg overflow-hidden">
+                    <thead class="bg-[#F6DDBD] text-gray-700">
+       
+  <style>
+    .rotate-180 {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body class="bg-[#FAF3EA]">
+<div class="outer-wrapper w-full overflow-x-auto">
+    <div class="inner-wrapper min-w-[1200px]">
+
+
+        <thead class="bg-[#F6DDBD] text-gray-700">
+        <tr>
+          <th class="border border-gray-300 p-2 w-auto max-w-[50px]">Chọn</th>
+                        <th class="border border-gray-300 p-2 min-w-[30px]">Ngày</th>
+                        <th class="border border-gray-300 p-2 min-w-[150px]">Họ và tên</th>
+                        <th class="border border-gray-300 p-2 min-w-[100px]">Số điện thoại</th>
+                        <th class="border border-gray-300 p-2 min-w-[100px]">Đặt cọc</th>
+                        <th class="border border-gray-300 p-2 min-w-[100px]">Dịch vụ</th>
+                        <th class="border border-gray-300 p-2 min-w-[100px]">Đền bù</th>
+                        <th class="border border-gray-300 p-2 min-w-[100px]">Ghi chú</th>
+                        <th class="border border-gray-300 p-2 min-w-[100px]">Thành tiền</th>
+                        <th class="border border-gray-300 p-2 min-w-[100px]">Thanh toán</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Vòng lặp tạo 10 hàng -->
+        <!-- 5 hàng đầu tiên: dropdown xuống dưới -->
+        <!-- 5 hàng cuối: dropdown lên trên -->
+        <script>
+          const services = `
+            <table class="w-full text-center border-collapse">
+              <tbody>
+                <tr class="hover:bg-[#F9E6D3]"><td class="border p-2">Than nướng</td><td class="border p-2"><input class="service-input w-20 p-1 border rounded text-right" type="number" placeholder="kg" data-price="50000" oninput="calculateServiceTotal(this)" /></td></tr>
+                <tr class="hover:bg-[#F9E6D3]"><td class="border p-2">Đá lạnh</td><td class="border p-2"><input class="service-input w-20 p-1 border rounded text-right" type="number" placeholder="túi" data-price="10000" oninput="calculateServiceTotal(this)" /></td></tr>
+                <tr class="hover:bg-[#F9E6D3]"><td class="border p-2">Người dọn dẹp</td><td class="border p-2"><input class="service-input w-20 p-1 border rounded text-right" type="number" placeholder="người" data-price="150000" oninput="calculateServiceTotal(this)" /></td></tr>
+                <tr class="hover:bg-[#F9E6D3]"><td class="border p-2">Check in/out</td><td class="border p-2"><input class="service-input w-20 p-1 border rounded text-right" type="number" placeholder="giờ" data-price="20000" oninput="calculateServiceTotal(this)" /></td></tr>
+                <tr class="hover:bg-[#F9E6D3]"><td class="border p-2">Phí dọn dẹp</td><td class="border p-2"><input class="service-input w-20 p-1 border rounded text-right" type="number" placeholder="lần" data-price="50000" oninput="calculateServiceTotal(this)" /></td></tr>
+              </tbody>
+            </table>
+          `;
+
+          for (let i = 1; i <= 10; i++) {
+            const isTopFive = i <= 5;
+            const dropdownDirection = isTopFive ? "top-full mt-2" : "bottom-full mb-2";
+            const arrowClass = isTopFive ? "" : "rotate-180";
+
+            document.write(`
+              <tr class="bg-[#FAF3EA] odd:bg-[#FAF3EA] hover:bg-[#FAF3EA]">
+                <td class="border p-2"><input type="checkbox" class="row-checkbox"></td>
+                <td class="border p-2"><input class="w-full p-1" type="date" /></td>
+                <td class="border p-2"><input class="w-full p-1" type="text"/></td>
+                <td class="border p-2"><input class="w-full p-1" type="text"/></td>
+                <td class="border p-2"><input class="w-full p-1 text-right deposit" type="text" oninput="formatCurrency(this); calculateTotal(this)" placeholder="0" /></td>
+                <td class="border p-2">
+                  <div class="relative inline-block w-[100px]">
+                    <div onclick="toggleDropdown(this)" class="flex justify-between items-center border rounded px-2 py-1 cursor-pointer bg-white hover:bg-gray-100">
+                      <span class="text-gray-500 select-none">Chọn</span>
+                      <svg class="w-5 h-5 text-gray-600 ${arrowClass}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
+                    <div class="dropdown hidden absolute ${dropdownDirection} left-0 w-[260px] bg-[#FAF3EA] rounded-lg shadow-lg z-10 p-2">
+                      ${services}
+                      <button class="w-full py-2 mt-2 bg-[#C4A484] hover:bg-[#B39272] text-white font-semibold rounded transition" onclick="closeDropdown(this)">Lưu</button>
+                    </div>
+                  </div>
+                </td>
+                <td class="border p-2"><input class="w-full p-1 text-right compensation" type="text" oninput="formatCurrency(this); calculateTotal(this)" placeholder="0" /></td>
+                <td class="border p-2"><input class="w-full p-1" type="text" /></td>
+                <td class="border p-2"><input class="w-full p-1 text-right total-amount" type="text" placeholder="0" readonly /></td>
+                <td class="border p-2">
+                  <select class="w-full p-1">
+                    <option>Chưa thanh toán</option>
+                    <option>Đã thanh toán</option>
+                  </select>
+                </td>
+              </tr>
+            `);
+          }
+		  
+        </script>
+      </tbody>
+    </table>
+    </div>
+    <section>
+        <div class="flex justify-end items-center space-x-4 mt-4 pr-0">
+  <button class="bg-[#F6DDBD] p-2" onclick="addRow()"><b>Thêm khách hàng</b></button>
+  <button class="bg-[#F6DDBD] p-2" onclick="deleteRow()"><b>Xóa</b></button>
+</div>
+
+<!-- Modal xác nhận xóa -->
+<div id="deleteConfirmation" class="hidden fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+  <div class="bg-[#FAF3EA] p-6 rounded-lg shadow-lg text-center">
+    <p class="text-lg font-semibold text-gray-800">
+      Bạn có chắc chắn muốn xóa khách hàng khỏi lịch của căn không?
+    </p>
+    <div class="flex justify-center space-x-6 mt-6">
+      <button id="cancelDeleteBtn" class="bg-[#FCE9CC] px-6 py-2 rounded-lg text-black font-medium hover:bg-[#E8D3B0] transition">
+        Hủy
+      </button>
+      <button id="confirmDeleteBtn" class="bg-[#FCE9CC] px-6 py-2 rounded-lg text-black font-medium hover:bg-[#E8D3B0] transition">
+        Xóa
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+    // Lấy các phần tử cần thiết
+    const deleteConfirmationModal = document.getElementById('deleteConfirmation');
+    const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+    const cancelDeleteBtn = document.getElementById('cancelDeleteBtn');
+
+    // Hàm hiển thị modal khi nhấn "Xóa"
+    function deleteRow() {
+        const checkboxes = document.querySelectorAll('.row-checkbox:checked');
+        if (checkboxes.length === 0) {
+            alert("Vui lòng chọn ít nhất một hàng để xóa.");
+            return;
+        }
+        deleteConfirmationModal.classList.remove('hidden');  // Hiển thị modal
+    }
+
+    // Xác nhận xóa
+    confirmDeleteBtn.addEventListener('click', function () {
+        document.querySelectorAll('.row-checkbox:checked').forEach(checkbox => {
+            checkbox.closest('tr').remove();  // Xóa hàng
+        });
+        deleteConfirmationModal.classList.add('hidden');  // Ẩn modal sau khi xóa
+    });
+
+    // Hủy xóa
+    cancelDeleteBtn.addEventListener('click', function () {
+        deleteConfirmationModal.classList.add('hidden');  // Ẩn modal khi hủy
+    });
+</script>
+
+<style>
+    #deleteConfirmation {
+        display: none;
+    }
+
+    /* Khi modal không có class "hidden" thì hiển thị */
+    #deleteConfirmation:not(.hidden) {
+        display: flex;
+    }
+</style>
+
+
+<script>
+    const services = `
+    <table class="w-full text-center border-collapse">
+        <tbody>
+            <tr class="hover:bg-[#F9E6D3]"><td class="border p-2">Than nướng</td><td class="border p-2"><input class="service-input w-20 p-1 border rounded text-right" type="number" placeholder="kg" data-price="50000" oninput="calculateServiceTotal(this)" /></td></tr>
+            <tr class="hover:bg-[#F9E6D3]"><td class="border p-2">Đá lạnh</td><td class="border p-2"><input class="service-input w-20 p-1 border rounded text-right" type="number" placeholder="túi" data-price="10000" oninput="calculateServiceTotal(this)" /></td></tr>
+            <tr class="hover:bg-[#F9E6D3]"><td class="border p-2">Người dọn dẹp</td><td class="border p-2"><input class="service-input w-20 p-1 border rounded text-right" type="number" placeholder="người" data-price="150000" oninput="calculateServiceTotal(this)" /></td></tr>
+            <tr class="hover:bg-[#F9E6D3]"><td class="border p-2">Check in/out</td><td class="border p-2"><input class="service-input w-20 p-1 border rounded text-right" type="number" placeholder="giờ" data-price="20000" oninput="calculateServiceTotal(this)" /></td></tr>
+            <tr class="hover:bg-[#F9E6D3]"><td class="border p-2">Phí dọn dẹp</td><td class="border p-2"><input class="service-input w-20 p-1 border rounded text-right" type="number" placeholder="lần" data-price="50000" oninput="calculateServiceTotal(this)" /></td></tr>
+        </tbody>
+    </table>
+    `;
+
+    function addRow() {
+        const customerBody = document.getElementById('customerBody');
+        const newRow = document.createElement('tr');
+        newRow.className = "bg-[#FAF3EA] odd:bg-[#FAF3EA] hover:bg-[#FAF3EA]";
+        newRow.innerHTML = `
+            <td class="border p-2"><input type="checkbox" class="row-checkbox"></td>
+            <td class="border p-2"><input class="w-full p-1" type="date" /></td>
+            <td class="border p-2"><input class="w-full p-1" type="text"/></td>
+            <td class="border p-2"><input class="w-full p-1" type="text"/></td>
+            <td class="border p-2"><input class="w-full p-1 text-right deposit" type="text" oninput="formatCurrency(this); calculateTotal(this)" placeholder="0" /></td>
+            <td class="border p-2">
+                <div class="relative inline-block w-[100px]">
+                    <div onclick="toggleDropdown(this)" class="flex justify-between items-center border rounded px-2 py-1 cursor-pointer bg-white hover:bg-gray-100">
+                        <span class="text-gray-500 select-none">Chọn</span>
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                    <div class="dropdown hidden absolute top-full mt-2 left-0 w-[260px] bg-[#FAF3EA] rounded-lg shadow-lg z-10 p-2">
+                        ${services}
+                        <button class="w-full py-2 mt-2 bg-[#C4A484] hover:bg-[#B39272] text-white font-semibold rounded transition" onclick="closeDropdown(this)">Lưu</button>
+                    </div>
+                </div>
+            </td>
+            <td class="border p-2"><input class="w-full p-1 text-right compensation" type="text" oninput="formatCurrency(this); calculateTotal(this)" placeholder="0" /></td>
+            <td class="border p-2"><input class="w-full p-1" type="text" /></td>
+            <td class="border p-2"><input class="w-full p-1 text-right total-amount" type="text" placeholder="0" readonly /></td>
+            <td class="border p-2">
+                <select class="w-full p-1">
+                    <option>Chưa thanh toán</option>
+                    <option>Đã thanh toán</option>
+                </select>
+            </td>
+        `;
+        customerBody.appendChild(newRow);
+    }
+
+    
+
+    // Các hàm khác như formatCurrency, calculateServiceTotal, calculateTotal, toggleDropdown, closeDropdown vẫn giữ nguyên
+</script>
+
+<style>
+    #deleteConfirmation {
+        display: none;
+    }
+    #deleteConfirmation.hidden {
+        display: none;
+    }
+</style>
+  </section>
+  
+
+  <script>
+    function formatCurrency(input) {
+      let value = input.value.replace(/\D/g, "");
+      input.value = new Intl.NumberFormat("vi-VN").format(value);
+    }
+
+    function calculateServiceTotal(serviceInput) {
+      const row = serviceInput.closest("tr").closest("tbody").closest(".dropdown").closest("td").closest("tr");
+      const serviceInputs = row.querySelectorAll(".service-input");
+      let serviceTotal = 0;
+
+      serviceInputs.forEach(input => {
+        const price = parseInt(input.dataset.price) || 0;
+        const quantity = parseInt(input.value) || 0;
+        serviceTotal += price * quantity;
+      });
+      row.dataset.serviceTotal = serviceTotal;
+      calculateTotal(row);
+    }
+
+    function calculateTotal(row) {
+      const deposit = parseInt((row.querySelector(".deposit")?.value.replace(/\D/g, "")) || 0);
+      const compensation = parseInt((row.querySelector(".compensation")?.value.replace(/\D/g, "")) || 0);
+      const serviceTotal = parseInt(row.dataset.serviceTotal || 0);
+      const total = Math.max(serviceTotal + compensation - deposit, 0);
+      row.querySelector(".total-amount").value = new Intl.NumberFormat("vi-VN").format(total);
+    }
+
+    function toggleDropdown(element) {
+      const dropdown = element.nextElementSibling;
+      dropdown.classList.toggle("hidden");
+      const arrow = element.querySelector("svg");
+      arrow.classList.toggle("rotate-180");
+    }
+
+    function closeDropdown(button) {
+      const dropdown = button.closest(".dropdown");
+      dropdown.classList.add("hidden");
+      const arrow = dropdown.previousElementSibling.querySelector("svg");
+      arrow.classList.remove("rotate-180");
+    }
+	document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.querySelector('table:nth-of-type(2) input[type="text"]'); // Ô nhập số điện thoại
+    const searchButton = document.querySelector('table:nth-of-type(2) button'); // Nút tìm kiếm
+    const customerRows = document.querySelectorAll("#customerTable tbody tr"); // Các hàng trong bảng khách hàng
+    const originalColor = "#FAF3EA"; // 🌸 Màu nền ban đầu
+
+    searchButton.addEventListener("click", function () {
+        const searchValue = searchInput.value.trim();
+        let found = false;
+
+        if (!searchValue) {
+            alert("Vui lòng nhập số điện thoại.");
+            return;
+        }
+
+        // 🔄 Reset màu tất cả hàng
+        customerRows.forEach(row => {
+            row.style.transition = "background-color 0.5s ease";
+            row.style.backgroundColor = originalColor;
+        });
+
+        customerRows.forEach(row => {
+            const phoneInput = row.querySelector("td:nth-child(4) input"); // Cột số điện thoại
+
+            if (phoneInput && phoneInput.value.trim() === searchValue) {
+                row.style.backgroundColor = "#F6DDBD"; // 🌟 Highlight vàng
+
+                // 🌀 Cuộn mượt tới hàng
+                row.scrollIntoView({ behavior: "smooth", block: "center" });
+
+                found = true;
+
+                // ⏳ Sau 2 giây: Mờ dần về màu ban đầu
+                setTimeout(() => {
+                    row.style.transition = "background-color 1s ease";
+                    row.style.backgroundColor = originalColor;
+                }, 5000);
+            }
+        });
+
+        if (!found) {
+            alert("Không tìm thấy khách hàng với số điện thoại này.");
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const monthInput = document.querySelector('table.border input[placeholder="Tháng"]');
+  const yearInput = document.querySelector('table.border input[placeholder="Năm"]');
+  const searchButton = document.querySelector('table.border button');
+  const customerRows = document.querySelectorAll("#customerTable tbody tr");
+  const originalColor = "#FAF3EA";
+
+  searchButton.addEventListener("click", function () {
+    const month = monthInput.value.trim();
+    const year = yearInput.value.trim();
+    let found = false;
+
+    if (!month || !year) {
+      alert("Vui lòng nhập đầy đủ Tháng và Năm.");
+      return;
+    }
+
+    const formattedMonth = month.padStart(2, "0");
+
+    customerRows.forEach((row) => {
+      row.style.transition = "background-color 0.5s ease";
+      row.style.backgroundColor = originalColor;
+    });
+
+    customerRows.forEach((row) => {
+      const dateInput = row.querySelector("td:nth-child(2) input[type='date']");
+
+      if (dateInput) {
+        const cellDate = dateInput.value.trim();
+
+        if (cellDate.startsWith(`${year}-${formattedMonth}`)) {
+          row.style.backgroundColor = "#F6DDBD";
+          row.scrollIntoView({ behavior: "smooth", block: "center" });
+          found = true;
+
+          setTimeout(() => {
+            row.style.transition = "background-color 1s ease";
+            row.style.backgroundColor = originalColor;
+          }, 5000);
+        }
+      }
+    });
+
+    if (!found) {
+      alert("Không tìm thấy dữ liệu cho tháng và năm đã nhập.");
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tableBody = document.getElementById("customer-table-body");
+    const addButton = document.getElementById("add-customer");
+    const deleteButton = document.getElementById("delete-selected");
+    const confirmModal = document.getElementById("confirm-delete-modal");
+    const confirmDeleteBtn = document.getElementById("confirm-delete");
+    const cancelDeleteBtn = document.getElementById("cancel-delete");
+    
+    // Thêm hàng mới
+    addButton.addEventListener("click", function () {
+        const newRow = document.createElement("tr");
+        newRow.innerHTML = `
+            <td><input type="checkbox" class="row-checkbox"></td>
+            <td>Khách hàng mới</td>
+            <td>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Tùy chọn &#9650;</button>
+                    <div class="dropdown-content">
+                        <a href="#">Chỉnh sửa</a>
+                        <a href="#">Xóa</a>
+                    </div>
+                </div>
+            </td>
+        `;
+        tableBody.appendChild(newRow);
+        attachDropdownEvents(newRow);
+    });
+
+    // Mở modal xác nhận xóa
+    deleteButton.addEventListener("click", function () {
+        confirmModal.style.display = "block";
+    });
+
+    // Xác nhận xóa
+    confirmDeleteBtn.addEventListener("click", function () {
+        document.querySelectorAll(".row-checkbox:checked").forEach(checkbox => {
+            checkbox.closest("tr").remove();
+        });
+        confirmModal.style.display = "none";
+    });
+
+    // Hủy xóa
+    cancelDeleteBtn.addEventListener("click", function () {
+        confirmModal.style.display = "none";
+    });
+
+    // Xử lý dropdown trong bảng
+    function attachDropdownEvents(row) {
+        const dropdownBtn = row.querySelector(".dropdown-btn");
+        const dropdownContent = row.querySelector(".dropdown-content");
+        
+        dropdownBtn.addEventListener("click", function (event) {
+            event.stopPropagation();
+            dropdownContent.classList.toggle("show");
+        });
+    }
+    
+    // Đóng dropdown nếu nhấn ra ngoài
+    window.addEventListener("click", function () {
+        document.querySelectorAll(".dropdown-content").forEach(dropdown => {
+            dropdown.classList.remove("show");
+        });
+    });
+});
+
+function addRow() {
+    const customerTable = document.querySelector('#customerTable tbody');  // Lấy phần thân bảng
+    const newRow = document.createElement('tr');  // Tạo một dòng mới
+    newRow.className = "bg-[#FAF3EA] odd:bg-[#FAF3EA] hover:bg-[#FAF3EA]";  // Thêm lớp CSS cho dòng mới
+
+    newRow.innerHTML = `
+        <td class="border p-2"><input type="checkbox" class="row-checkbox"></td>
+        <td class="border p-2"><input class="w-full p-1" type="date" /></td>
+        <td class="border p-2"><input class="w-full p-1" type="text"/></td>
+        <td class="border p-2"><input class="w-full p-1" type="text"/></td>
+        <td class="border p-2">
+            <input class="w-full p-1 text-right deposit" type="text" 
+                oninput="formatCurrency(this); calculateTotal(this)" placeholder="0" />
+        </td>
+        <td class="border p-2">
+            <div class="relative inline-block w-[100px]">
+                <div onclick="toggleDropdown(this)" 
+                    class="flex justify-between items-center border rounded px-2 py-1 cursor-pointer bg-white hover:bg-gray-100">
+                    <span class="text-gray-500 select-none">Chọn</span>
+                    <!-- Mũi tên hướng lên -->
+                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+                    </svg>
+                </div>
+                <!-- Dropdown hiển thị lên trên -->
+                <div class="dropdown hidden absolute bottom-full mb-2 left-0 w-[260px] bg-[#FAF3EA] rounded-lg shadow-lg z-10 p-2">
+                    ${services}
+                    <button class="w-full py-2 mt-2 bg-[#C4A484] hover:bg-[#B39272] text-white font-semibold rounded transition" onclick="closeDropdown(this)">Lưu</button>
+                </div>
+            </div>
+        </td>
+        <td class="border p-2">
+            <input class="w-full p-1 text-right compensation" type="text" 
+                oninput="formatCurrency(this); calculateTotal(this)" placeholder="0" />
+        </td>
+        <td class="border p-2"><input class="w-full p-1" type="text" /></td>
+        <td class="border p-2">
+            <input class="w-full p-1 text-right total-amount" type="text" placeholder="0" readonly />
+        </td>
+        <td class="border p-2">
+            <select class="w-full p-1">
+                <option>Chưa thanh toán</option>
+                <option>Đã thanh toán</option>
+            </select>
+        </td>
+    `;
+
+    customerTable.appendChild(newRow);  // Thêm dòng mới vào bảng
+}
+</script>
+<div class="footer">
+    <div class="footer-content" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <div class="footer-section">
+            <h3 ><strong>STARTLIT</strong></h3>
+            <p style="margin-top: 5px;">Địa chỉ: 98 Dương Quảng Hàm, Cầu Giấy, Hà Nội</p>
+            <p style="margin-top: 5px;">Điện thoại: 0567894444</p>
+            <p style="margin-top: 5px;">Email: starlit198@gmail.com</p>
+        </div>
+        <div class="footer-section">
+            <h3><strong>Liên kết</strong></h3>
+            <ul style="font-size: 14px;;color: purple;">
+                <li><a href="../trangchu.html">Trang Chủ</a></li>
+                <li><a href="../cacloaican.html">Khám Phá</a></li>
+                <li><a href="../gioithieu.html">Giới Thiệu</a></li>
+                <li><a href="../fb4(draft).html">Liên Hệ</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3><strong>Hỗ trợ</strong></h3>
+            <ul style="font-size: 14px;;color: purple;">
+                <li><a href="#">Thanh Toán</a></li>
+                <li><a href="../trangchu.html">Quay Lại</a></li>
+                <li><a href="#">Chính Sách Bảo Hành</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3><strong>Đề Xuất</strong></h3>
+            <input type="text" placeholder="Nhập gợi ý của bạn">
+            <a href="../dangki.html"><button>Đăng Ký</button></a>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 20px;">&copy; 2025 Starlit Homestay. All rights reserved.</p>
+</div>
+
+<!--  -->
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchIcon = document.querySelector(".fa-magnifying-glass");
+        const searchBar = document.querySelector(".search-bar");
+
+        searchIcon.addEventListener("click", function () {
+            if (searchBar.style.display === "none" || searchBar.style.display === "") {
+                searchBar.style.display = "block"; // Hiện thanh tìm kiếm
+            } else {
+                searchBar.style.display = "none"; // Ẩn nếu đã mở
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navMenu = document.querySelector(".nav-menu");
+
+        menuIcon.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+        });
+    });
+</script>
+</div>
+
+</main>
+</div>
+
+</div>
+</div>
+<div>
+    
+
+</body>
+</html>
